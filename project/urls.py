@@ -27,6 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls'), name='project'),
     path('downloadfile',include('downloadapp.urls'),name='dwonlode'),
-    url(r'^media/(?P<path>.*)$', Server,{'document_root': settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', Server,{'document_root': settings.STATIC_ROOT}),
+    # url(r'^media/(?P<path>.*)$', Server,{'document_root': settings.MEDIA_ROOT}), 
+    # url(r'^static/(?P<path>.*)$', Server,{'document_root': settings.STATIC_ROOT}),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
