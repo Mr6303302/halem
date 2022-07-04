@@ -17,6 +17,7 @@ from argparse import Namespace
 from unicodedata import name
 from xml.dom.minidom import Document
 from xml.etree.ElementInclude import include
+from xmlrpc.client import Server
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -26,4 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls'), name='project'),
     path('downloadfile',include('downloadapp.urls'),name='dwonlode'),
+    url(r'^media/(?P<path>.*)$', Server,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', Server,{'document_root': settings.STATIC_ROOT}),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

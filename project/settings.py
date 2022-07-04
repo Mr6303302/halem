@@ -24,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1#rt7@em4r&3s#s=azd91ban=^5$!x$6f5sn65=xxqt3q&bn5)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com']
+
+
 
 
 # Application definition
@@ -43,7 +45,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,6 +141,3 @@ EMAIL_HOST_USER='abdelhlimabohmida@gmail.com'
 EMAIL_HOST_PASSWORD='isobheibjtaydxsu'
 EMAIL_USE_TLS=True
 EMAIL_PORT='587'
-
-
-
