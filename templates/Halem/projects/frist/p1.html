@@ -1,0 +1,38 @@
+{% extends 'Halem/nav_project.html' %}
+{%load static%}
+{% block content %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/1_project.css' %}" />
+</head>
+<body>
+    <section class="main">
+        <div class="slideshow-container">
+
+            <div class="image">
+                <img src="{{project.fimage.url}}" alt="">
+            </div>
+            
+            {% if project.cotente == '0' %}
+            {% else %}
+            <div>
+                <br>
+                <p >{{project.cotente}}</p>
+            </div>
+            {% endif %}
+           
+            <br><br>
+            {%for i in images%}
+            <div class="image">
+                <img src="{{i.project_image.url}}" alt=""> 
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+</body>
+</html>
+{% endblock %}

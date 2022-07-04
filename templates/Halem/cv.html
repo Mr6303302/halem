@@ -1,0 +1,26 @@
+{% extends 'Halem/light_nav.html' %}
+{%load static%}
+{% block content %}
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/about_me.css' %}" />
+</head>
+
+<body>
+    <section class="main">
+        <div class="content">
+            <img src="{%static 'images/photo.jpeg'%}" alt="">
+            <h1 style="text-align: center;">Graphic Disgner</h1>
+        </div>
+        <p>Hello,i'm Abdelhalim abdel im a graphic design based in cairo ,Egypt. specialized in Branding and logo design
+            <br>
+            i have 2 year of professional experience in the creative Branding and logo design .i worked as freelance
+            with start up <br>
+            and i'm currently studing in the journrest department in fauclty of mass communictation .i have worked in
+            most countrise around the arab world , helping them to build a creative identity .<br>
+            and i will do my best to make a smart brand to fit your bessines.</p><br>
+            <a href="{% url 'downlode'  %}" class="btt" style="text-align: center;">View Rusm</a>  
+    </section>
+</body>
+</html>
+{% endblock %}

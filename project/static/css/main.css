@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500;1,600&family=Noto+Serif:ital,wght@1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+.header {
+    padding: 7px 6% 0 0;
+    background: rgb(255, 255, 255) ;
+  }
+
+  .navbar{
+  display: flex;
+  padding: 7px 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 4em;
+}
+
+.sidenav {
+  flex: 1;
+    text-align: right;
+}
+
+.sidenav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.sidenav ul li a {
+  color:#fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.sidenav ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background:#6a5bd6;
+  display: block;
+  transition: 0.5s;
+}
+
+.sidenav ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+
+.closebtn{
+  display: none;
+  padding-left: 241px;
+  color: #fff;
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu {
+display: none;
+}
+
+@media ( max-width:700px) {
+  .text-box h1 {
+      font-size: 20px;
+  }
+  .sidenav ul li a {
+
+    color: #fff;
+
+  }
+  .sidenav ul li {
+      display: block;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  .closebtn{
+    display: block;
+    }
+  .menu{
+      display: block;
+      color: rgb(52, 4, 80);
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+}
+
+  .content{
+    background:rgb(52, 4, 80) ;
+  }
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #fff;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background:rgba(26, 19, 71, 0.9);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover{
+    background:#fff;
+    color:rgba(26, 19, 71, 0.9);
+    padding: 14px 22px;
+    transition: 0.7s ;
+  }
+
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+.main{
+  display: none;
+}
+
+  footer{
+    background: #fff;
+    color: rgb(52, 4, 80);
+    padding: 10px;
+    display: flex;
+    justify-content:space-around;
+    justify-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+  }
+  .footer a img{
+  width: 4em;
+  }
+  .footer .social-icon a {
+    text-decoration: none;
+    color:rgb(52, 4, 80) ;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+  }
+  
+  @media (max-width:700px) {
+      footer{
+          font-weight: 300;
+          font-size: 15px;
+      }
+      .footer .social-icon a{
+          padding-left: 10px;
+      }
+      
+  }
+
+.logo img {
+    width: 4em;
+}
+
+.navigation{
+  border: 2px solid rgb(114, 30, 96);
+  border-radius: 10px;
+}
+
+.navigation a{
+   text-decoration: none;
+    color:rgb(114, 30, 96);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.manu a{
+  text-decoration: none;
+    color:rgb(114, 30, 96);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.manu a:hover{
+  color:rgb(12, 12, 12);
+
+}
+.navigation a:hover
+{
+    color:rgb(12, 12, 12);
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    min-height: 260vh ;
+    display: flex;
+    align-items: center;
+    background: url(../images/cover2.jpeg) no-repeat;
+    background-position: center;
+   background-size:cover;
+}
+
+
+@media (max-width:700px) {
+
+    .main{
+        min-height: 600px;
+        background: url(../images/mob_bj.jpeg) no-repeat;
+        background-position:center;
+       background-size:cover;
+       /* padding: 50px; */
+    }
+}
+
+
+footer{
+  background: rgba(26, 19, 71, 0.9) ;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content:space-around;
+  justify-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  align-items: center;
+}
+.footer a img{
+width: 4em;
+}
+.footer .social-icon a {
+  text-decoration: none;
+  color:#fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+}
+
+@media (max-width:700px) {
+    footer{
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .footer .social-icon a{
+        padding-left: 10px;
+    }
+    
+}
+
+

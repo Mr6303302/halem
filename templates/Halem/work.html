@@ -1,0 +1,33 @@
+{% extends 'Halem/nav_project.html' %}
+{%load static%}
+{% block content %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/projects.css' %}" />
+</head>
+
+<body>
+    <section class="main">
+        <p>{{pro.name}}</p>
+
+        {%for x in pro%}
+        <div class="contant">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{x.image.url}}" />
+                </div>
+                <div class="project-info">
+                    <p class="project-tittle">{{x.name}}</p>
+                    <a href="{% url 'project_detail' x.id  %}" class="more-details">View</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+            
+    </section>
+</body>
+</html>
+{% endblock %}

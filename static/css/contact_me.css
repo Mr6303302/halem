@@ -1,0 +1,18 @@
+.content {
+  height: 90vh;
+  background-color: rgb(52, 4, 80);
+  padding: 20px;
+
+}
+.center {
+  margin-right: 6%;
+  transform: translate(-6%, 35%)
+}
+
+@media (max-width:700px) {
+  .center {
+    margin-right: -2%;
+    transform: translate(-2%, 8%)
+  }
+
+}
